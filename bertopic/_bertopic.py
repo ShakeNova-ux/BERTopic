@@ -1487,7 +1487,7 @@ class BERTopic:
                 representative_docs[topic] = list(result.astype(int))
 
         # Convert indices to documents
-        self.representative_docs = {topic: [documents.iloc[doc_id].Document for doc_id in doc_ids]
+        self.representative_docs = {topic: [doc_id for doc_id in doc_ids]
                                     for topic, doc_ids in
                                     representative_docs.items()}
 
